@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El Sadar - CA Osasuna</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
+
+header {
+    background: #c8102e;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+nav {
+    background: #222;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ed1c3b;
+}
+
+.portada {
+    height: 500px;
+    background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.65)),
+    url("https://www.osasuna.es/public/Image/2025/6/imagencabecera-23_jpg_ApaisadaHeader.webp")
+    center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.portada h2 {
+    font-size: 55px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.portada p {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+section {
+    padding: 55px 10%;
+}
+
+section h2 {
+    color: #c8102e;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    line-height: 1.8;
+    font-size: 17px;
+    text-align: center;
+}
+
+.datos {
+    background: #c8102e;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    text-align: center;
+    padding: 45px 8%;
+}
+
+.dato h3 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.dato p {
+    font-size: 16px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+}
+
+.historia {
+    background: white;
+}
+
+.aficion {
+    background: #222;
+    color: white;
+}
+
+.aficion h2 {
+    color: #ed1c3b;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer span {
+    color: #ed1c3b;
+    font-weight: bold;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 38px;
+    }
+
+    .portada h2 {
+        font-size: 35px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>EL SADAR</h1>
+    <p>El templo del osasunismo</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#datos">Datos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#aficion">Afición</a>
+</nav>
+
+<!-- PORTADA -->
+
+<div class="portada" id="inicio">
+    <div>
+        <h2>BIENVENIDOS A EL SADAR</h2>
+        <p>Donde late el corazón rojillo</p>
+    </div>
+</div>
+
+<!-- HISTORIA -->
+
+<section class="historia" id="historia">
+    <h2>La historia de El Sadar</h2>
+
+    <p>
+        El estadio El Sadar es la casa del Club Atlético Osasuna.
+        Fue inaugurado el 2 de septiembre de 1967 y desde entonces
+        se ha convertido en uno de los lugares más importantes
+        de la historia del fútbol navarro.
+
+        A lo largo de los años ha vivido grandes partidos,
+        victorias inolvidables y momentos históricos.
+        Es un símbolo de Pamplona y del sentimiento rojillo.
+    </p>
+
+    <div class="galeria">
+        <img
+        src="https://www.osasuna.es/public/Image/2025/6/imagencabecera-23_jpg_ApaisadaHeader.webp"
+        alt="Vista interior de El Sadar">
+
+        <img
+        src="https://www.europlan-online.de/files/bd1acd666e657f015445d90091906a1c.jpg"
+        alt="El Sadar iluminado al anochecer">
+    </div>
+</section>
+
+<!-- DATOS -->
+
+<div class="datos" id="datos">
+
+    <div class="dato">
+        <h3>1967</h3>
+        <p>Año de inauguración</p>
+    </div>
+
+    <div class="dato">
+        <h3>23.516</h3>
+        <p>Espectadores de capacidad</p>
+    </div>
+
+    <div class="dato">
+        <h3>Pamplona</h3>
+        <p>Ubicación</p>
+    </div>
+
+    <div class="dato">
+        <h3>CAO</h3>
+        <p>Club Atlético Osasuna</p>
+    </div>
+
+</div>
+
+<!-- GALERÍA -->
+
+<section id="galeria">
+    <h2>Galería de El Sadar</h2>
+
+    <p>
+        Descubre algunos de los rincones más especiales
+        del estadio rojillo.
+    </p>
+
+    <div class="galeria">
+
+        <img
+        src="https://www.osasuna.es/public/Image/2025/6/imagencabecera-23_jpg_ApaisadaHeader.webp"
+        alt="Interior completo del estadio">
+
+        <img
+        src="https://stadiumdb.com/pictures/stadiums/esp/estadio_el_sadar/estadio_el_sadar20.jpg"
+        alt="Gradas y terreno de juego">
+
+        <img
+        src="https://www.europlan-online.de/files/bd1acd666e657f015445d90091906a1c.jpg"
+        alt="El Sadar de noche">
+
+        <img
+        src="https://estaticosgn-cdn.deia.eus/clip/154a12f3-13b9-499e-a44c-6ecc8bdc7464_16-9-discover-aspect-ratio_default_0.jpg"
+        alt="El estadio lleno de aficionados">
+
+    </div>
+</section>
+
+<!-- AFICIÓN -->
+
+<section class="aficion" id="aficion">
+    <h2>La afición rojilla</h2>
+
+    <p>
+        El Sadar no sería lo mismo sin su afición.
+        Los seguidores de Osasuna acompañan al equipo
+        en cada partido, llenando las gradas de cánticos,
+        banderas y pasión.
+
+        Ser de Osasuna es un sentimiento que pasa
+        de generación en generación.
+    </p>
+
+    <div class="galeria">
+
+        <img
+        src="https://imagenes.diariodenavarra.es/files/article_main_microformat/uploads/2022/08/13/68b017beb97a0.jpeg"
+        alt="Afición de Osasuna animando en El Sadar">
+
+        <img
+        src="https://estaticosgn-cdn.deia.eus/clip/2ff16fe5-a388-4e03-8f1d-abb5e3f5fe5c_16-9-discover-aspect-ratio_default_0.jpg"
+        alt="Ambiente rojillo en el estadio">
+
+    </div>
+</section>
+
+<footer>
+    <p>EL SADAR ❤️ | <span>ORGULLO ROJILLO</span></p>
+    <p>Desde 1967, la casa de Osasuna.</p>
+</footer>
+
+</body>
+</html>

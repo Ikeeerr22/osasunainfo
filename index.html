@@ -1,0 +1,1351 @@
+ <!DOCTYPE html>
+    <html lang="es">
+    
+    <body>
+   
+   
+    <head>
+      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>C.A. OSASUNA - NUNCA SE RINDE</title>
+        <meta name="description" content="Descubre la historia, los títulos, las leyendas y El Sadar.">
+        <link rel="preconnect" href="https://googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="borde-brillante.css">
+        <style>
+            /* =========================
+               CONFIGURACIÓN GENERAL
+            ========================== */
+            :root {
+                --rojo: #e30613;
+                --rojo-oscuro: #a80008;
+                --azul-oscuro: #002d72;
+                --blanco: #ffffff;
+                --negro: #101010;
+                --gris: #777777;
+                --gris-claro: #f5f5f5;
+                --borde: #e8e8e8;
+                --ancho: 1200px;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 90px;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background: var(--blanco);
+                color: var(--negro);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            button {
+                font-family: inherit;
+            }
+
+            .container {
+                width: min(92%, var(--ancho));
+                margin: auto;
+            }
+
+            /* =========================
+               CABECERA Y NAVEGACIÓN
+            ========================== */
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.97);
+                border-bottom: 1px solid var(--borde);
+                backdrop-filter: blur(12px);
+            }
+
+            .navbar {
+                min-height: 78px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 25px;
+            }
+
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                white-space: nowrap;
+            }
+
+            .brand img {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+            }
+
+            .brand-name {
+                font-size: 1.05rem;
+            }
+
+            .brand-name span {
+                color: var(--rojo);
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 28px;
+                list-style: none;
+            }
+
+            .nav-links a {
+                font-size: 0.82rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: color 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: var(--rojo);
+            }
+
+            .nav-links .nav-home {
+                color: var(--rojo);
+            }
+
+            .menu-button {
+                display: none;
+                border: none;
+                background: transparent;
+                font-size: 1.8rem;
+                cursor: pointer;
+                color: var(--negro);
+            }
+
+            /* =========================
+               PORTADA PRINCIPAL
+            ========================== */
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+                color: var(--blanco);
+                background: 
+                    linear-gradient(
+                        90deg,
+                        rgba(0, 0, 0, 0.86) 0%,
+                        rgba(0, 0, 0, 0.68) 55%,
+                        rgba(0, 0, 0, 0.4) 100%
+                    ),
+                    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6BdM15Dt95-P-QIGBcVB40rpAfyaMWx7Dl7T-D_uzOw&s=10")
+                    center / contain no-repeat;
+            }
+
+            .hero-content {
+                max-width: 850px;
+                padding-top: 90px;
+            }
+
+            .hero-label {
+                display: inline-block;
+                color: var(--blanco);
+                background: var(--rojo);
+                padding: 7px 16px;
+                font-size: 0.78rem;
+                font-weight: 800;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+            }
+
+            .hero h1 {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: clamp(4rem, 10vw, 8.5rem);
+                font-weight: 800;
+                line-height: 0.88;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            .hero h1 span {
+                color: var(--rojo);
+                display: block;
+            }
+
+            .hero p {
+                font-size: clamp(1rem, 2vw, 1.35rem);
+                max-width: 620px;
+                color: #e7e7e7;
+                margin-bottom: 35px;
+            }
+
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 15px 28px;
+                background: var(--rojo);
+                color: var(--blanco);
+                font-size: 0.85rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                border: 2px solid var(--rojo);
+                transition: 0.3s;
+            }
+
+            .btn:hover {
+                background: var(--rojo-oscuro);
+                border-color: var(--rojo-oscuro);
+                transform: translateY(-3px);
+            }
+
+            .btn-outline {
+                background: transparent;
+                border-color: rgba(255, 255, 255, 0.6);
+                margin-left: 12px;
+            }
+
+            .btn-outline:hover {
+                background: var(--blanco);
+                color: var(--negro);
+                border-color: var(--blanco);
+            }
+
+            .hero-bottom {
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                width: 100%;
+            }
+
+            .hero-bottom .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hero-bottom span {
+                font-size: 0.75rem;
+                letter-spacing: 3px;
+                color: #cccccc;
+            }
+
+            /* =========================
+               FRANJA DE IDENTIDAD
+            ========================== */
+            .identity {
+                background: var(--rojo);
+                color: var(--blanco);
+                padding: 25px 0;
+            }
+
+            .identity-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+                gap: 20px;
+            }
+
+            .identity-item {
+                border-right: 1px solid rgba(255,255,255,0.3);
+            }
+
+            .identity-item:last-child {
+                border-right: none;
+            }
+
+            .identity-item strong {
+                display: block;
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 2rem;
+            }
+
+            .identity-item span {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            /* =========================
+               PLANTILLA
+            ========================== */
+            .plantilla-section {
+                padding: 100px 0;
+                background: #101010;
+                color: #fff;
+            }
+
+            .plantilla-section h2 {
+                font-family: 'Barlow Condensed', sans-serif;
+                color: var(--rojo);
+                font-size: 3.5rem;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+            }
+
+            .seccion-cat {
+                font-family: 'Barlow Condensed', sans-serif;
+                color: #fff;
+                background-color: var(--azul-oscuro);
+                font-size: 1.4rem;
+                padding: 6px 15px;
+                display: inline-block;
+                border-radius: 4px;
+                margin-top: 25px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+            }
+
+            .plantilla-section ul {
+                list-style-type: none;
+                padding-left: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 12px;
+            }
+
+            .plantilla-section li {
+                font-size: 1.1rem;
+                color: #e0e0e0;
+                background: #1b1b1b;
+                padding: 12px 18px;
+                border-left: 4px solid var(--rojo);
+                border-radius: 4px;
+            }
+
+            /* =========================
+               ESTADIO
+            ========================== */
+            .stadium {
+                background: var(--gris-claro);
+                padding: 100px 0;
+            }
+
+            .stadium-grid {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .stadium-image {
+                height: 470px;
+                border-radius: 8px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .stadium-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .stadium-image::after {
+                content: "ESTADIO EL SADAR";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 25px;
+                background: linear-gradient(transparent, rgba(0,0,0,0.85));
+                color: white;
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 1.8rem;
+                font-weight: 800;
+            }
+
+            .stadium-content h2 {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 3.5rem;
+                line-height: 1;
+                margin-bottom: 25px;
+            }
+
+            .stadium-content h2 span {
+                color: var(--rojo);
+            }
+
+    Usa el código con precaución.
+    .stadium-content p {
+    color: var(--gris);
+    margin-bottom: 20px;
+    }
+    .stadium-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    }
+    .stadium-data-item {
+    background: var(--blanco);
+    padding: 20px;
+    border-left: 4px solid var(--rojo);
+    }
+    .stadium-data-item strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.8rem;
+    }
+    .stadium-data-item span {
+    font-size: 0.75rem;
+    color: var(--gris);
+    text-transform: uppercase;
+    }
+    /* =========================
+    FOOTER
+    ========================== */
+    footer {
+    background: #090909;
+    color: var(--blanco);
+    padding: 40px 0;
+    text-align: center;
+    }
+    .footer-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    }
+    .footer-brand span {
+    color: var(--rojo);
+    }
+    footer p {
+    color: #888;
+    font-size: 0.95rem;
+    }
+    footer a {
+    color: var(--rojo);
+    text-decoration: underline;
+    }
+    /* =========================
+    RESPONSIVE & RESPONSIVE MENU
+    ========================== /
+    @media (max-width: 760px) {
+    .menu-button {
+    display: block; / Muestra las tres rayas en móviles */
+    }
+    .nav-links {
+    display: none; /* Oculto por defecto en móviles */
+    flex-direction: column;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid var(--borde);
+    gap: 15px;
+    }
+    /* Clase que añadiremos con JavaScript para mostrarlo */
+    .nav-links.open {
+    display: flex;
+    }
+    .stadium-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    }
+    .stadium-image {
+    height: 330px;
+    }
+    .hero-bottom {
+    display: none;
+    }
+    .identity-grid {
+    grid-template-columns: 1fr;
+    }
+    }
+
+
+    C.A. OSASUNA
+
+    ☰
+
+
+    Inicio
+    Plantilla
+    El Sadar
+
+
+
+    DESDE 1920
+
+    EL ORGULLO
+    DE NAVARRA
+
+
+    Más que un club, una historia de pasión, lucha y fidelidad. Una identidad que se siente en cada rincón de Pamplona y El Sadar.
+
+
+    Ver plantilla
+    ↓
+
+
+    El Sadar
+
+
+
+
+
+    CLUB ATLÉTICO OSASUNA
+    ROJILLOS · PASIÓN · EL SADAR
+
+
+    1920
+    Año de fundación
+
+
+    EL SADAR
+    Nuestra fortaleza
+
+
+    ROJILLOS
+    Nuestra afición
+
+
+    Plantilla C.A. Osasuna
+    Porteros
+
+    1. Sergio Herrera (4º Capitán)
+    13. Aitor Fernández (3º Capitán)
+    Defensas
+
+    5. Jorge Herrando
+    15. Diego Rico
+    19. Valentin Rosier
+    22. Enzo Boyomo
+    23. Abel Bretones
+    24. Alejandro Catena
+    27. Arguibide
+    48. Rockson Yeboah
+    Centrocampistas
+
+    6. Lucas Torró
+    7. Jon Moncayola
+    8. Iker Muñoz
+    10. Aimar Oroz
+    14. Rubén García (2º Capitán)
+    16. Moi Gómez
+    20. Romain Del Castillo
+    26. Mauro Echegoyen
+    29. Asier Osambela
+    Delanteros
+
+    9. Raúl García de Haro
+    11. Kike Barja (1º Capitán)
+    17. Ante Budimir
+    18. Raúl Moro
+    21. Dubasin
+
+
+    Nuestra casa: El Sadar
+
+    Inaugurado en 1967 y renovado por completo recientemente, El Sadar destaca como uno de los estadios más modernos de la liga, manteniendo su ambiente ruidoso e imbatible.
+
+
+
+    23.576
+    Capacidad
+
+
+    1967
+    Inauguración
+
+
+
+
+
+    C.A. OSASUNA
+    Sitio web de referencia: www.osasuna.es
+
+    const menuButton = document.getElementById('menuButton');
+    const navLinks = document.getElementById('navLinks');
+    menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.contains('open');
+    menuButton.setAttribute('aria-expanded', isOpen);
+    });
+    // Cierra el menú automáticamente cuando se pulsa un enlace
+    navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    });
+    });
+    
+
+
+    
+    }
+
+    .hero h1 span {
+        display: block;
+        color: var(--rojo);
+    }
+
+    .hero p {
+        max-width: 650px;
+        color: #eee;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: var(--rojo);
+        color: white;
+        padding: 14px 25px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: .8rem;
+        border: 2px solid var(--rojo);
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background: var(--rojo-oscuro);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        border-color: white;
+        margin-left: 10px;
+    }
+
+    .hero-bottom {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+    }
+
+    .hero-bottom .container {
+        display: flex;
+        justify-content: space-between;
+        color: #ddd;
+        font-size: .75rem;
+        letter-spacing: 3px;
+    }
+
+    /* IDENTIDAD */
+
+    .identity {
+        background: var(--rojo);
+        color: white;
+        padding: 30px 0;
+    }
+
+    .identity-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+        gap: 20px;
+    }
+
+    .identity-item {
+        border-right: 1px solid #ffffff55;
+    }
+
+    .identity-item:last-child {
+        border: 0;
+    }
+
+    .identity-item strong {
+        display: block;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2.3rem;
+    }
+
+    .identity-item span {
+        text-transform: uppercase;
+        font-size: .75rem;
+        letter-spacing: 1px;
+    }
+
+    /* TÍTULOS */
+
+    .section-title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    .section-title span {
+        color: var(--rojo);
+    }
+
+    /* HISTORIA */
+
+    .history {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .history-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .history-image {
+        height: 390px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .history-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .history-text p {
+        color: var(--gris);
+        margin-bottom: 18px;
+    }
+
+    .history-highlight {
+        border-left: 5px solid var(--rojo);
+        padding: 15px 20px;
+        background: var(--claro);
+        margin-top: 25px;
+    }
+
+    /* MOMENTOS HISTÓRICOS */
+
+    .moments {
+        padding: 90px 0;
+        background: var(--negro);
+        color: white;
+    }
+
+    .timeline {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .timeline-card {
+        padding: 25px;
+        background: #1d1d1d;
+        border-bottom: 4px solid var(--rojo);
+        transition: .3s;
+    }
+
+    .timeline-card:hover {
+        transform: translateY(-7px);
+    }
+
+    .timeline-card strong {
+        display: block;
+        color: var(--rojo);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2.5rem;
+    }
+
+    .timeline-card h3 {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    /* PALMARÉS */
+
+    .achievements {
+        padding: 85px 0;
+        background: var(--rojo);
+        color: white;
+    }
+
+    .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 25px;
+    }
+
+    .achievement {
+        text-align: center;
+        padding: 25px;
+        border: 1px solid #ffffff55;
+    }
+
+    .achievement strong {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 3rem;
+        display: block;
+    }
+
+    .achievement span {
+        font-size: .85rem;
+        text-transform: uppercase;
+    }
+
+    /* PLANTILLA */
+
+    .plantilla-section {
+        padding: 100px 0;
+        background: #101010;
+        color: white;
+    }
+
+    .position-title {
+        display: inline-block;
+        background: var(--azul);
+        padding: 7px 18px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.5rem;
+        margin: 25px 0 15px;
+        border-radius: 4px;
+    }
+
+    .players {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+        gap: 12px;
+        list-style: none;
+    }
+
+    .players li {
+        padding: 14px 18px;
+        background: #202020;
+        border-left: 4px solid var(--rojo);
+        transition: .3s;
+    }
+
+    .players li:hover {
+        background: #303030;
+        transform: translateX(5px);
+    }
+
+    /* LEYENDAS */
+
+    .legends {
+        padding: 100px 0;
+        background: var(--claro);
+    }
+
+    .legend-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 22px;
+    }
+
+    .legend-card {
+        background: white;
+        padding: 28px;
+        border-radius: 7px;
+        border-bottom: 4px solid var(--rojo);
+    }
+
+    .legend-card h3 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    .legend-card p {
+        color: var(--gris);
+        font-size: .9rem;
+    }
+
+    /* ESTADIO */
+
+    .stadium {
+        background: white;
+        padding: 100px 0;
+    }
+
+    .stadium-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 55px;
+        align-items: center;
+    }
+
+    .stadium-image {
+        height: 450px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .stadium-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .stadium-content p {
+        color: var(--gris);
+        margin-bottom: 20px;
+    }
+
+    .stadium-data {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+
+    .stadium-data-item {
+        padding: 20px;
+        background: var(--claro);
+        border-left: 4px solid var(--rojo);
+    }
+
+    .stadium-data-item strong {
+        display: block;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2rem;
+    }
+
+    .stadium-data-item span {
+        color: var(--gris);
+        text-transform: uppercase;
+        font-size: .75rem;
+    }
+
+    /* AFICIÓN */
+
+    .supporters {
+        padding: 85px 0;
+        background: var(--azul);
+        color: white;
+        text-align: center;
+    }
+
+    .supporters h2 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .supporters p {
+        max-width: 750px;
+        margin: auto;
+        color: #e2e8f0;
+        font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background: #090909;
+        color: white;
+        text-align: center;
+        padding: 45px 0;
+    }
+
+    .footer-brand {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .footer-brand span {
+        color: var(--rojo);
+    }
+
+    footer p {
+        color: #888;
+        margin-top: 8px;
+        font-size: .9rem;
+    }
+
+    footer a {
+        color: var(--rojo);
+        text-decoration: underline;
+    }
+
+    .social-links {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: .85rem;
+        font-weight: 700;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:760px) {
+
+        .menu-button {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 78px;
+            left: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            padding: 25px;
+            gap: 18px;
+            border-bottom: 2px solid var(--rojo);
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .hero {
+            min-height: 90vh;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem,14vw,6rem);
+        }
+
+        .hero-bottom {
+            display: none;
+        }
+
+        .identity-grid,
+        .history-grid,
+        .timeline,
+        .achievement-grid,
+        .legend-grid,
+        .stadium-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .identity-item {
+            border-right: none;
+            border-bottom: 1px solid #ffffff55;
+            padding-bottom: 15px;
+        }
+
+        .identity-item:last-child {
+            border-bottom: none;
+        }
+
+        .history,
+        .moments,
+        .plantilla-section,
+        .legends,
+        .stadium {
+            padding: 65px 0;
+        }
+
+        .history-image,
+        .stadium-image {
+            height: 300px;
+        }
+
+        .section-title,
+        .supporters h2 {
+            font-size: 2.8rem;
+        }
+
+        .btn-outline {
+            margin: 12px 0 0;
+        }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+        * {
+            transition: none !important;
+        }
+    }
+    </style>
+    </head>
+
+   
+    <body>
+    <header>
+        <div class="container navbar">
+
+            <a href="#inicio" class="brand">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6BdM15Dt95-P-QIGBcVB40rpAfyaMWx7Dl7T-D_uzOw&s=10">
+                <div>C.A. <span>OSASUNA</span></div>
+            </a>
+
+            <button class="menu-button" id="menuButton"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="navLinks">☰</button>
+
+            <nav aria-label="Navegación principal">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#titulos">Palmarés</a></li>
+                    <li><a href="pla.html">Plantilla</a></li>
+                    <li><a href="ley.html">Leyendas</a></li>
+                    <li><a href="sad.html">El Sadar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <span class="hero-label">DESDE 1920</span>
+
+            <h1>
+                EL ORGULLO
+                <span>DE NAVARRA</span>
+            </h1>
+
+            <p>
+                Más que un club, una historia de pasión, lucha y fidelidad.
+                Un sentimiento que une a toda Navarra.
+                Porque Osasuna nunca se rinde.
+            </p>
+
+            <a href="#plantilla" class="btn">Conoce la plantilla ↓</a>
+            <a href="#historia" class="btn btn-outline">Nuestra historia</a>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="container">
+                <span>CLUB ATLÉTICO OSASUNA</span>
+                <span>ROJILLOS · PASIÓN · EL SADAR</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="identity">
+        <div class="container identity-grid">
+            <div class="identity-item">
+                <strong>1920</strong>
+                <span>Año de fundación</span>
+            </div>
+
+            <div class="identity-item">
+                <strong>EL SADAR</strong>
+                <span>Nuestra fortaleza</span>
+            </div>
+
+            <div class="identity-item">
+                <strong>ROJILLOS</strong>
+                <span>Nuestra afición</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="history" id="historia">
+        <div class="container history-grid">
+
+            <div class="history-image">
+                <img src="osasuna-historia.jpg"
+                     alt="Historia del Club Atlético Osasuna"
+                     loading="lazy">
+            </div>
+
+            <div class="history-text">
+                <h2 class="section-title">
+                    NUESTRA <span>HISTORIA</span>
+                </h2>
+
+                <p>
+                    El Club Atlético Osasuna nació en Pamplona en 1920.
+                    Desde sus primeros pasos, el club se convirtió en
+                    uno de los grandes símbolos deportivos de Navarra.
+                </p>
+
+                <p>
+                    Su nombre significa salud o fuerza en euskera,
+                    valores que representan perfectamente el espíritu
+                    de un equipo que siempre lucha hasta el final.
+                </p>
+
+                <p>
+                    Generaciones de aficionados han mantenido viva
+                    una pasión que se transmite de padres a hijos.
+                </p>
+
+                <div class="history-highlight">
+                    <strong>¡OSASUNA NUNCA SE RINDE!</strong>
+                    <p>Una historia de orgullo, sacrificio y sentimiento rojillo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="moments">
+        <div class="container">
+            <h2 class="section-title">
+                MOMENTOS <span>HISTÓRICOS</span>
+            </h2>
+
+            <div class="timeline">
+
+                <article class="timeline-card">
+                    <strong>1920</strong>
+                    <h3>Nace Osasuna</h3>
+                    <p>Comienza la historia del Club Atlético Osasuna en Pamplona.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <strong>1967</strong>
+                    <h3>Inauguración de El Sadar</h3>
+                    <p>El club estrena el estadio que se convertirá en su fortaleza.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <strong>2005</strong>
+                    <h3>Primera final de Copa</h3>
+                    <p>Osasuna alcanza la final de la Copa del Rey.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <strong>2006</strong>
+                    <h3>Semifinal europea</h3>
+                    <p>El equipo alcanza las semifinales de la Copa de la UEFA.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <strong>2007</strong>
+                    <h3>Otra gran aventura europea</h3>
+                    <p>Osasuna vuelve a dejar su huella en Europa.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <strong>2023</strong>
+                    <h3>Otra final de Copa</h3>
+                    <p>El equipo vuelve a disputar la final de la Copa del Rey.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="titulos">
+        <div class="container">
+            <h2 class="section-title">PALMARÉS Y LOGROS</span></h2>
+<!-- PALMARÉS -->
+<section class="palmares-os" id="titulos">
+
+    <h2>Palmarés rojillo</h2>
+
+    <p class="palmares-intro">
+        La historia de un club que nunca deja de luchar.
+    </p>
+
+    <div class="palmares-grid">
+
+        <article class="palmares-card">
+            <strong>5</strong>
+            <h3>Segunda División</h3>
+            <p>
+                Campeón en 1935, 1953, 1956,
+                1961 y 2019.
+            </p>
+        </article>
+
+        <article class="palmares-card">
+            <strong>6</strong>
+            <h3>Tercera División</h3>
+            <p>
+                Campeón en 1932, 1948, 1949,
+                1969, 1975 y 1977.
+            </p>
+        </article>
+
+        <article class="palmares-card">
+            <strong>2</strong>
+            <h3>Finales de Copa del Rey</h3>
+            <p>
+                Subcampeón en 2005 y 2023.
+                Dos grandes noches para la historia.
+            </p>
+        </article>
+
+        <article class="palmares-card">
+            <strong>2006</strong>
+            <h3>Semifinal europea</h3>
+            <p>
+                Histórico recorrido hasta las
+                semifinales de la Copa de la UEFA.
+            </p>
+        </article>
+
+        <article class="palmares-card">
+            <strong>2023</strong>
+            <h3>Regreso a Europa</h3>
+            <p>
+                Clasificación para disputar
+                la Conference League.
+            </p>
+        </article>
+
+        <article class="palmares-card">
+            <strong>1920</strong>
+            <h3>Fundación del club</h3>
+            <p>
+                Más de un siglo representando
+                el orgullo de Navarra.
+            </p>
+        </article>
+
+    </div>
+
+    <div class="palmares-nota">
+        <strong>Orgullo rojillo:</strong>
+        Osasuna ha disputado dos finales de la Copa del Rey,
+        en 2005 y 2023. Aunque no consiguió levantar el trofeo,
+        ambas campañas forman parte de su historia.
+    </div>
+
+</section>
+            <div class="achievement-grid">
+                <div class="achievement">
+                    <strong>2</strong>
+                    <span>Finales de Copa del Rey</span>
+               </div>
+     <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+<footer>
+    CA OSASUNA · EL SÁDAR ❤️💙
+</footer>           
+</body>
+    </html>
+   
+               
+
+
+
+

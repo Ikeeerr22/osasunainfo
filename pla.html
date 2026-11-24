@@ -1,0 +1,365 @@
+<style>
+/* PLANTILLA OSASUNA */
+.plantilla-os {
+    background: #101010;
+    color: white;
+    padding: 85px 5%;
+}
+
+.plantilla-os .titulo-principal {
+    text-align: center;
+    color: #e30613;
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.plantilla-os .subtitulo {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 55px;
+}
+
+.grupo-jugadores {
+    max-width: 1200px;
+    margin: 0 auto 65px;
+}
+
+.grupo-jugadores h3 {
+    background: #e30613;
+    border-left: 7px solid #002d72;
+    padding: 15px 22px;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.grid-jugadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-jugador {
+    background: #202020;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 4px solid #e30613;
+    transition: .3s;
+}
+
+.tarjeta-jugador:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #e3061340;
+}
+
+.tarjeta-jugador img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    object-position: center bottom;
+    background: #292929;
+    display: block;
+}
+
+.info-jugador {
+    padding: 18px 10px;
+}
+
+.numero-jugador {
+    display: inline-block;
+    background: #e30613;
+    padding: 6px 17px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.info-jugador h4 {
+    font-size: 18px;
+    margin: 12px 0 5px;
+}
+
+.info-jugador p {
+    color: #aaa;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* MOVILES */
+@media(max-width:600px) {
+    .grid-jugadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tarjeta-jugador img {
+        height: 190px;
+    }
+
+    .info-jugador h4 {
+        font-size: 15px;
+    }
+
+    .grupo-jugadores h3 {
+        font-size: 21px;
+    }
+}
+</style>
+
+<!-- PLANTILLA -->
+<section class="plantilla-os" id="plantilla">
+
+    <h2 class="titulo-principal">Nuestra plantilla</h2>
+
+    <p class="subtitulo">
+        Temporada 2026/2027 · Club Atlético Osasuna
+    </p>
+
+    <div id="contenedor-jugadores"></div>
+
+</section>
+    
+<script>
+
+/* FOTOGRAFIAS DE OSASUNA */
+
+const baseFotos =
+"https://www.osasuna.es/public/Image/2026/";
+
+const jugadores = [
+
+    // PORTEROS
+    {
+        nombre: "Sergio Herrera",
+        numero: 1,
+        posicion: "Porteros",
+        foto: baseFotos + "8/s_herrera1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Aitor Fernández",
+        numero: 13,
+        posicion: "Porteros",
+        foto: baseFotos + "8/aitorfdez_1sinfondo_png_RetratoGrande.webp"
+    },
+
+    // DEFENSAS
+    {
+        nombre: "Jorge Herrando",
+        numero: 5,
+        posicion: "Defensas",
+        foto: baseFotos + "8/herrando1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Diego Rico",
+        numero: 15,
+        posicion: "Defensas",
+        foto: baseFotos + "8/diegoricosinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Valentin Rosier",
+        numero: 19,
+        posicion: "Defensas",
+        foto: baseFotos + "8/v_rosier1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Enzo Boyomo",
+        numero: 22,
+        posicion: "Defensas",
+        foto: baseFotos + "8/boyomo1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Abel Bretones",
+        numero: 23,
+        posicion: "Defensas",
+        foto: baseFotos + "8/abelbretones1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Alejandro Catena",
+        numero: 24,
+        posicion: "Defensas",
+        foto: baseFotos + "8/catena1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Arguibide",
+        numero: 27,
+        posicion: "Defensas",
+        foto: baseFotos + "8/arguibide1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Rockson Yeboah",
+        numero: 48,
+        posicion: "Defensas",
+        foto: baseFotos + "8/rockson_png_RetratoGrande.webp"
+    },
+
+    // CENTROCAMPISTAS
+    {
+        nombre: "Lucas Torró",
+        numero: 6,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/torr1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Jon Moncayola",
+        numero: 7,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/moncayola1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Iker Muñoz",
+        numero: 8,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/ikermuoz1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Aimar Oroz",
+        numero: 10,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/aimar1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Rubén García",
+        numero: 14,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/rubngarcasin1fondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Moi Gómez",
+        numero: 16,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/moigmez1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Romain Del Castillo",
+        numero: 20,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "9/partedn2026-09-03_r1jp9066copia_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Mauro Echegoyen",
+        numero: 26,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/saiz7509copia_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Asier Osambela",
+        numero: 29,
+        posicion: "Centrocampistas",
+        foto: baseFotos + "8/osambela_png_RetratoGrande.webp"
+    },
+
+    // DELANTEROS
+    {
+        nombre: "Raúl García",
+        numero: 9,
+        posicion: "Delanteros",
+        foto: baseFotos + "8/ral1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Kike Barja",
+        numero: 11,
+        posicion: "Delanteros",
+        foto: baseFotos + "8/kikebarja1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Ante Budimir",
+        numero: 17,
+        posicion: "Delanteros",
+        foto: baseFotos + "8/budimir1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Raúl Moro",
+        numero: 18,
+        posicion: "Delanteros",
+        foto: baseFotos + "8/moro1sinfondo_png_RetratoGrande.webp"
+    },
+    {
+        nombre: "Dubasin",
+        numero: 21,
+        posicion: "Delanteros",
+        foto: baseFotos + "8/dubasin1sinfondo_png_RetratoGrande.webp"
+    }
+
+];
+
+
+/* POSICIONES */
+const posiciones = [
+    "Porteros",
+    "Defensas",
+    "Centrocampistas",
+    "Delanteros"
+];
+
+
+/* CONTENEDOR */
+const contenedor =
+document.getElementById("contenedor-jugadores");
+
+
+/* GENERAR TARJETAS */
+posiciones.forEach(posicion => {
+
+    const grupo = document.createElement("div");
+    grupo.className = "grupo-jugadores";
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = posicion;
+
+    const grid = document.createElement("div");
+    grid.className = "grid-jugadores";
+
+    jugadores
+        .filter(jugador => jugador.posicion === posicion)
+        .forEach(jugador => {
+
+            const tarjeta =
+                document.createElement("article");
+
+            tarjeta.className = "tarjeta-jugador";
+
+            const foto = document.createElement("img");
+
+            foto.src = jugador.foto;
+            foto.alt = "Fotografía de " + jugador.nombre;
+            foto.loading = "lazy";
+
+            // IMAGEN ALTERNATIVA SI FALLA LA ORIGINAL
+            foto.onerror = function() {
+                this.onerror = null;
+                this.src =
+                    "https://ui-avatars.com/api/?name=" +
+                    encodeURIComponent(jugador.nombre) +
+                    "&background=e30613&color=ffffff&size=500";
+            };
+
+            const info = document.createElement("div");
+            info.className = "info-jugador";
+
+            const numero = document.createElement("span");
+            numero.className = "numero-jugador";
+            numero.textContent = jugador.numero;
+
+            const nombre = document.createElement("h4");
+            nombre.textContent = jugador.nombre;
+
+            const puesto = document.createElement("p");
+            puesto.textContent = jugador.posicion;
+
+            info.append(numero, nombre, puesto);
+
+            tarjeta.append(foto, info);
+
+            grid.appendChild(tarjeta);
+
+        });
+
+    grupo.append(titulo, grid);
+
+    contenedor.appendChild(grupo);
+
+});
+
+</script>

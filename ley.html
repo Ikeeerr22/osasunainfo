@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas del CA Osasuna</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background: #c8102e;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-bottom: 6px solid #8b001b;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ed1c3b;
+        }
+
+        .introduccion {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .introduccion h2 {
+            color: #c8102e;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .jugadores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 30px 7%;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .contenido {
+            padding: 20px;
+        }
+
+        .contenido h3 {
+            color: #c8102e;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .contenido p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .epoca {
+            display: inline-block;
+            background: #c8102e;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer span {
+            color: #ed1c3b;
+            font-weight: bold;
+        }
+
+        @media(max-width:600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <header>
+        <h1>LEYENDAS DE OSASUNA</h1>
+      
+       <p>Historia, pasión y orgullo rojillo desde 1920</p>
+  
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#leyendas">Leyendas</a>
+        <a href="#historia">Historia</a>
+    </nav>
+
+    <section class="introduccion" id="inicio">
+        <h2>Los grandes nombres de Osasuna</h2>
+        <p>
+            El Club Atlético Osasuna ha contado a lo largo de su historia
+            con futbolistas que han dejado una huella imborrable en El Sadar.
+            Jugadores que han defendido el escudo con orgullo y que forman
+            parte de la memoria del osasunismo.
+        </p>
+    </section>
+
+    <section class="jugadores" id="leyendas">
+
+        <!-- PATXI PUÑAL -->
+
+        <div class="tarjeta">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Patxi_Pu%C3%B1al.jpg"
+                alt="Patxi Puñal">
+
+            <div class="contenido">
+                <span class="epoca">1997 - 2014</span>
+                <h3>Patxi Puñal</h3>
+                <p>
+                    Uno de los grandes capitanes de Osasuna.
+                    Representó el compromiso, el esfuerzo y el amor
+                    por los colores rojillos durante muchos años.
+                </p>
+            </div>
+        </div>
+
+        <!-- JAVIER AGUIRRE -->
+
+        <div class="tarjeta">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Wiki_javier_aguirre.jpg"
+                alt="Javier Aguirre">
+
+            <div class="contenido">
+                <span class="epoca">2002 - 2006</span>
+                <h3>Javier Aguirre</h3>
+                <p>
+                    Entrenador fundamental en una de las etapas más
+                    recordadas del club. Con él, Osasuna alcanzó
+                    la final de la Copa del Rey de 2005.
+                </p>
+            </div>
+        </div>
+
+        <!-- ROBERTO TORRES -->
+
+        <div class="tarjeta">
+            <img
+                src="https://img.rtve.es/n/17172359?w=1600"
+                alt="Roberto Torres">
+
+            <div class="contenido">
+                <span class="epoca">2011 - 2023</span>
+                <h3>Roberto Torres</h3>
+                <p>
+                    Centrocampista con una gran calidad técnica.
+                    Fue protagonista del regreso de Osasuna
+                    a Primera División y dejó grandes recuerdos.
+                </p>
+            </div>
+        </div>
+
+        <!-- CESAR CRUCHAGA -->
+
+        <div class="tarjeta">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Cruchaga.JPG"
+                alt="César Cruchaga">
+
+            <div class="contenido">
+                <span class="epoca">1997 - 2009</span>
+                <h3>César Cruchaga</h3>
+                <p>
+                    Defensa y capitán histórico del equipo.
+                    Fue uno de los símbolos de la generación
+                    que llevó a Osasuna a Europa.
+                </p>
+            </div>
+        </div>
+
+        <!-- RAUL GARCIA -->
+
+        <div class="tarjeta">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Raul_Garcia_Escudero_2011.jpg"
+                alt="Raúl García">
+
+            <div class="contenido">
+                <span class="epoca">2004 - 2007</span>
+                <h3>Raúl García</h3>
+                <p>
+                    Centrocampista formado en Osasuna que destacó
+                    por su carácter, personalidad y entrega.
+                    Posteriormente desarrolló una gran carrera.
+                </p>
+            </div>
+        </div>
+
+        <!-- JOHN ALOISI -->
+
+        <div class="tarjeta">
+            <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Aloisi_penalty_-_The_Moment.JPG"
+                alt="John Aloisi">
+
+            <div class="contenido">
+                <span class="epoca">2001 - 2005</span>
+                <h3>John Aloisi</h3>
+                <p>
+                    Delantero australiano muy recordado por la
+                    afición rojilla. Su paso por Osasuna dejó
+                    grandes recuerdos entre los seguidores.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="introduccion" id="historia">
+        <h2>Un sentimiento que nunca termina</h2>
+        <p>
+            Osasuna es mucho más que un equipo de fútbol.
+            Es una afición, una ciudad y una historia llena de
+            sacrificio, pasión y orgullo. Sus leyendas siempre
+            tendrán un lugar especial en El Sadar.
+        </p>
+    </section>
+
+    <footer>
+        <p>CA Osasuna ❤️ | <span>Orgullo Rojillo</span></p>
+        <p>Una historia que merece ser recordada.</p>
+    </footer>
+
+</body>
+</html>
